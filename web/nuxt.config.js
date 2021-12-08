@@ -1,4 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
 import fs from 'fs'
 
 export default {
@@ -77,6 +76,10 @@ export default {
     SC_TEMPLATE: fs.readFileSync(
       './components/lib/templates/storageclass.yaml',
       'utf8'
+    ),
+    PC_TEMPLATE: fs.readFileSync(
+        './components/lib/templates/priorityclass.yaml',
+        'utf8'
     ),
   },
 }

@@ -1,8 +1,6 @@
 import {
   V1PersistentVolumeClaim,
   V1PersistentVolumeClaimList,
-  V1Pod,
-  V1PodList,
 } from '@kubernetes/client-node'
 import { instance } from '@/api/v1/index'
 
@@ -16,7 +14,7 @@ export const applyPersistentVolumeClaim = async (
       req
     )
     return res.data
-  } catch (e) {
+  } catch (e: any) {
     onError(e)
   }
 }

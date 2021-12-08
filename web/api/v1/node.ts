@@ -1,4 +1,4 @@
-import { V1Node, V1NodeList, V1Pod, V1PodList } from '@kubernetes/client-node'
+import { V1Node, V1NodeList } from '@kubernetes/client-node'
 import { instance } from '@/api/v1/index'
 
 export const applyNode = async (
@@ -8,7 +8,7 @@ export const applyNode = async (
   try {
     const res = await instance.post<V1Node>(`/nodes`, req)
     return res.data
-  } catch (e) {
+  } catch (e: any) {
     onError(e)
   }
 }

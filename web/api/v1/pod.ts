@@ -5,7 +5,7 @@ export const applyPod = async (req: V1Pod, onError: (msg: string) => void) => {
   try {
     const res = await instance.post<V1Pod>(`/pods`, req)
     return res.data
-  } catch (e) {
+  } catch (e: any) {
     onError(e)
   }
 }
