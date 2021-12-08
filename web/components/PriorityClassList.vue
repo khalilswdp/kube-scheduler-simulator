@@ -2,7 +2,7 @@
   <v-row no-gutters v-if="priorityclasses.length !== 0">
     <v-col>
       <v-card class="ma-2" outlined>
-        <v-card-title class="mb-1"> StorageClasses </v-card-title>
+        <v-card-title class="mb-1"> PriorityClasses </v-card-title>
         <v-card-actions>
           <v-chip
             class="ma-2"
